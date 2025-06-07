@@ -2,7 +2,7 @@
 <main>
     <section class="container-main">
         <div class="container-main-image">
-            <img src="images/pexels-fauxels-3184195.jpg" alt="Alimentação saudável">
+            <img src="assents/images/pexels-fauxels-3184195.jpg" alt="Alimentação saudável">
             <h1>PRIORIZAMOS A SUA ALIMENTAÇÃO</h1>
         </div>
         <div class="caixas">
@@ -21,9 +21,9 @@
             <h2>PARCERIAS</h2>
             <p>Conheça nossos parceiros</p>
             <div class="logos">
-                <a href="#"><img src="images/sus.jpeg" alt="SUS" class="caixaRelativa"></a>
-                <a href="#"><img src="images/crn3.jpeg" alt="CRN3" class="caixaRelativa"></a>
-                <a href="#"><img src="images/cremesp.jpeg" alt="CREMESP" class="caixaRelativa"></a>
+                <a href="#"><img src="assents/images/sus.jpeg" alt="SUS" class="caixaRelativa"></a>
+                <a href="#"><img src="assents/images/crn3.jpeg" alt="CRN3" class="caixaRelativa"></a>
+                <a href="#"><img src="assents/images/cremesp.jpeg" alt="CREMESP" class="caixaRelativa"></a>
             </div>
         </div>
     </section>
@@ -31,17 +31,17 @@
         <h2>FUNCIONALIDADES</h2>
         <div class="caixas">
             <div class="caixa">
-                <a href="#"><img src="images/nutricionista.jpg" alt="Nutricionista" class="caixaRelativa"></a>
+                <a href="#"><img src="assents/images/nutricionista.jpg" alt="Nutricionista" class="caixaRelativa"></a>
                 <h3>Marque uma consulta com uma nutricionista</h3>
                 <p>Para acompanhar sua alimentação.</p>
             </div>
             <div class="caixa">
-                <a href="#"><img src="images/dieta.jpg" alt="Dieta" class="caixaRelativa"></a>
+                <a href="#"><img src="assents/images/dieta.jpg" alt="Dieta" class="caixaRelativa"></a>
                 <h3>Dietas focadas no seu perfil</h3>
                 <p>Através do mapeamento de dados.</p>
             </div>
             <div class="caixa">
-                <a href="#"><img src="images/crianca.jpg" alt="Criança" class="caixaRelativa"></a>
+                <a href="#"><img src="assents/images/crianca.jpg" alt="Criança" class="caixaRelativa"></a>
                 <h3>Plano alimentar junto ao cadúnico</h3>
                 <p>Associar famílias de baixa renda a fornecedores de alimentos.</p>
             </div>

@@ -3,10 +3,10 @@
     use PDO;
     use PDOException;
     class connecion{
-        private $host ="localhost";
-        private $db_name="fatec";
+        private $host ="db";
+        private $db_name="delimeter";
         private $username="root";
-        private $password="";
+        private $password="root";
         private $conn;
         
         public function getConnection(){

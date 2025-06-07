@@ -1,8 +1,8 @@
     <footer>
         <div class="social">
-            <a href="https://www.instagram.com/delim3ter/"><img src="images/instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="images/whatsapp.png" alt="WhatsApp"></a>
-            <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://www.instagram.com/delim3ter/"><img src="assents/images/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="assents/images/whatsapp.png" alt="WhatsApp"></a>
+            <a href="#"><img src="assents/images/linkedin.png" alt="LinkedIn"></a>
         </div>
         <div class="links">
             <a href="#">Política de Privacidade</a> |
@@ -11,6 +11,6 @@
         </div>
         <p>&copy; 2024 - Delímiter LTDA - Todos os direitos reservados.</p>
     </footer>
-    <script src="scripts/script.js"></script>
+    <script src="assents/scripts/script.js"></script>
 </body>
 </html>

@@ -7,13 +7,11 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: mydb
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
-    ports:
-      - "3306:3306"
+      MYSQL_DATABASE: delimeter
     volumes:
       - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -24,6 +22,20 @@ services:
     environment:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: root
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php-web
+    volumes:
+      - ./public:/var/www/html
+      - ./src:/var/www/html/src
+      - ./docker/php.ini:/usr/local/etc/php/php.ini
+    ports:
+      - "8010:80"
+    depends_on:
+      - db
 
 volumes:
   db_data:
