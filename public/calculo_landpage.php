@@ -2,7 +2,7 @@
   <main>
     <section class="container-main">
       <div class="container-main-image">
-        <img src="images/almoço.jpg" alt="Alimentação saudável">
+        <img src="assets/images/almoço.jpg" alt="Alimentação saudável">
         <h1>PRIORIZAMOS A SUA ALIMENTAÇÃO</h1>
       </div>
     </section>
