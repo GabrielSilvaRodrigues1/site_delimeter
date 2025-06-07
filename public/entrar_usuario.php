@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include __DIR__ . '/header.php'; ?>
 <main>
     <div class="container-calc">
         <form action="select_usuario.php" method="POST" id="formulario">
@@ -12,9 +12,9 @@
                     <label for="senha">Senha:</label>
                     <input type="password" name="senha" required id="senha">
                 </div>
-                <button value="submit" onclick="if (validarFormulario()) enviarDados();">Cadastrar</button>
+                <button type="submit">Entrar</button>
             </div>
         </form>
     </div>
 </main>
-<?php include 'footer.php'; ?>
+<?php include __DIR__ . '/footer.php'; ?>
