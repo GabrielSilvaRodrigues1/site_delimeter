@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deliméter - Priorize sua Alimentação</title>
-    <link rel="stylesheet" href="../assents/styles/styles.css">
+    <link rel="stylesheet" href="../assets/styles/styles.css">
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <a href="../index.php"><img src="../assents/images/logo.png" alt="Logo Delímiter"></a>
+            <a href="../index.php"><img src="../assets/images/logo.png" alt="Logo Delímiter"></a>
         </div>
         <div class="menu-hamburguer">
             <input type="checkbox" id="menu-toggle">

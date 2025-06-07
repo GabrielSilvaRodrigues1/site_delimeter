@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id'])) {
     <main>
         <section class="container-main">
             <div class="container-main-image">
-                <img src="images/almoço.jpg" alt="Pessoas em uma mesa distribuindo refeições">
+                <img src="../../assets/images/almoço.jpg" alt="Pessoas em uma mesa distribuindo refeições">
             </div>
         </section>
         <section class="about">
@@ -20,7 +20,7 @@ if (!isset($_SESSION['user_id'])) {
                     <p>O nome <span>Deliméter</span> é inspirado na deusa <span>Deméter</span>, conhecida como a deusa da agricultura na mitologia grega. A parte "Deli" do nome faz referência a <span>delimitação</span>, que é o principal objetivo deste site: delimitar e acompanhar a sua alimentação.</p>
                     <a href="conta.php"><button type="button">Finalize sua Inscrição</button></a>
                 </div>
-                <img src="../../images/delimeter.png" alt="Deusa delimeter" style="height: 50%;">
+                <img src="../../assets/images/delimeter.png" alt="Deusa delimeter" style="height: 50%;">
             </div>
         </section>
     </main>
