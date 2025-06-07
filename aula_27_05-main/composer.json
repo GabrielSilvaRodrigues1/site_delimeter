@@ -1,0 +1,15 @@
+{
+    "name": "codespace/aula_27_05",
+    "autoload": {
+        "psr-4": {
+            "Codespace\\Aula2705\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gabriel da Silva",
+            "email": "gabriel.rodrigues106@fatec.sp.gov.br"
+        }
+    ],
+    "require": {}
+}
