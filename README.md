@@ -1,2 +1,2 @@
 # site_delimeter
-Site de um aplicativo sobre nutrição utilizando Flask
+Site de um aplicativo sobre nutrição utilizando Composer.
