@@ -1,12 +1,12 @@
-<?php include 'header.php'; ?>
-<main>
 <?php
 session_start();
 if (!isset($_SESSION['user_id'])) {
     header('Location: ../entrar_usuario.php');
     exit();
 }
+include 'header.php';
 ?>
+<main>
     <div class="container-calc">
         <form action="user_tipo.php" method="POST" id="formulario">
             <div class="container">
