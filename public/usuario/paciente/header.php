@@ -22,7 +22,7 @@
             </label>
             <div class="overlay">
                 <nav>
-                    <ul  aria-label="Acessibilidade" class="acessibilidade" class="navbar-acessibilidade">
+                    <ul aria-label="Acessibilidade" class="acessibilidade">
                         <li><a href="../../about.php" class="link">Sobre Nós</a></li>
                         <li><a href="../../calculo_landpage.php" class="link">Cálculo nutricional</a></li>
                         <li><a href="conta.php" class="link">Conta</a></li>
@@ -33,6 +33,7 @@
                         <li><button onclick="toggleDaltonismo('protanopia')" aria-label="Simular protanopia">Protanopia</button></li>
                         <li><button onclick="toggleDaltonismo('deuteranopia')" aria-label="Simular deuteranopia">Deuteranopia</button></li>
                         <li><button onclick="toggleDaltonismo('tritanopia')" aria-label="Simular tritanopia">Tritanopia</button></li>
+                        <button onclick="resetarAcessibilidade()" aria-label="Restaurar configurações de acessibilidade">Voltar ao normal</button>
                     </ul>
                 </nav>
             </div>

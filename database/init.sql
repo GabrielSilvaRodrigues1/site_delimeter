@@ -1,4 +1,4 @@
-CREATE DATABASE delimeter;
+CREATE DATABASE IF NOT EXISTS delimeter;
 USE delimeter;
 CREATE TABLE usuario (
     id_usuario BIGINT AUTO_INCREMENT PRIMARY KEY,
