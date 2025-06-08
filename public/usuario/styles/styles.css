@@ -32,6 +32,8 @@ header {
 }
 
 .menu-icon{
+    position: relative;
+    z-index: 10001;
     width: 35px;
     height: 30px;
     display: flex;
@@ -554,65 +556,12 @@ footer p {
 }
 
 /* Filtros para simulação de daltonismo */
-.protanopia a,
-.protanopia button,
-.protanopia input,
-.protanopia select,
-.protanopia textarea,
-.protanopia label,
-.protanopia nav,
-.protanopia header,
-.protanopia footer,
-.protanopia .overlay,
-.protanopia img,
-.protanopia table,
-.protanopia th,
-.protanopia td {
-    filter: grayscale(0.3) contrast(1.2) sepia(0.7) hue-rotate(-30deg) !important;
+/* Daltonismo base - aplicação de filtro */
+.protanopia,
+.deuteranopia,
+.tritanopia {
+    filter: grayscale(0.3) contrast(1.2) sepia(0.7) hue-rotate(var(--hue-rotate)) !important;
 }
-
-.protanopia ::placeholder {
-    filter: grayscale(0.3) contrast(1.2) sepia(0.7) hue-rotate(-30deg) !important;
-}
-
-.deuteranopia a,
-.deuteranopia button,
-.deuteranopia input,
-.deuteranopia select,
-.deuteranopia textarea,
-.deuteranopia label,
-.deuteranopia nav,
-.deuteranopia header,
-.deuteranopia footer,
-.deuteranopia .overlay,
-.deuteranopia img,
-.deuteranopia table,
-.deuteranopia th,
-.deuteranopia td {
-    filter: grayscale(0.3) contrast(1.2) sepia(0.7) hue-rotate(30deg) !important;
-}
-
-.deuteranopia ::placeholder {
-    filter: grayscale(0.3) contrast(1.2) sepia(0.7) hue-rotate(30deg) !important;
-}
-
-.tritanopia a,
-.tritanopia button,
-.tritanopia input,
-.tritanopia select,
-.tritanopia textarea,
-.tritanopia label,
-.tritanopia nav,
-.tritanopia header,
-.tritanopia footer,
-.tritanopia .overlay,
-.tritanopia img,
-.tritanopia table,
-.tritanopia th,
-.tritanopia td {
-    filter: grayscale(0.3) contrast(1.2) sepia(0.7) hue-rotate(90deg) !important;
-}
-
-.tritanopia ::placeholder {
-    filter: grayscale(0.3) contrast(1.2) sepia(0.7) hue-rotate(90deg) !important;
-}
+.protanopia { --hue-rotate: -30deg; }
+.deuteranopia { --hue-rotate: 30deg; }
+.tritanopia { --hue-rotate: 90deg; }
