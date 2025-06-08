@@ -4,7 +4,7 @@ if (!isset($_SESSION['user_id'])) {
     header('Location: ../entrar_usuario.php');
     exit();
 }
-include __DIR__ . 'header.php'; ?>
+include __DIR__ . '/header.php'; ?>
 
 <!-- Bloco de acessibilidade -->
 <nav aria-label="Acessibilidade" class="acessibilidade">
@@ -40,4 +40,4 @@ function toggleContraste() {
 }
 </style>
 
-<?php include __DIR__ . 'footer.php'; ?>
+<?php include __DIR__ . '/footer.php'; ?>

@@ -11,6 +11,6 @@
         </div>
         <p>&copy; 2024 - Delímiter LTDA - Todos os direitos reservados.</p>
     </footer>
-    <script src="../../assets/scripts/script.js"></script>
+    <script src="../scripts/script.js"></script>
 </body>
 </html>

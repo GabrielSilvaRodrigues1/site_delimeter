@@ -11,6 +11,11 @@
         </div>
         <p>&copy; 2024 - Delímiter LTDA - Todos os direitos reservados.</p>
     </footer>
-    <script src="../../assets/scripts/script.js"></script>
+    <script src="../scripts/script.js"></script>
 </body>
+<svg width="0" height="0" style="position:absolute">
+  <filter id="protanopia">
+    <feColorMatrix type="matrix" values="0.567 0.433 0 0 0 0.558 0.442 0 0 0 0 0.242 0.758 0 0 0 0 0 1 0"/>
+  </filter>
+</svg>
 </html>

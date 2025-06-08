@@ -1,7 +1,7 @@
 /* Reset e estilos gerais */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #9aff91;
     color: #333;
     margin: 0;
 }
@@ -352,6 +352,7 @@ img {
     padding: 10px 10px 50px 10px;
     background-color: #26a65b;
     margin-top: 0;
+    margin-bottom: 80px;
 }
 
 
@@ -377,6 +378,7 @@ img {
     box-shadow: 0px 2px 10px rgb(0, 0, 0);
     padding: 20px;
     box-sizing: border-box;
+    margin-bottom: 100px;
 }
 
 .container h1{
@@ -428,14 +430,20 @@ button {
 
 /* Rodapé responsivo */
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between; /* Mantém os elementos espaçados */
     align-items: center;
     background-color: #333;
     color: #9bea9b;
     text-align: center;
-    padding: 10px;
+    padding: 10px 20px; /* Aumentei o padding horizontal para melhor espaçamento */
+    z-index: 100; /* Evita que o footer fique atrás de outros elementos */
+    gap: 15px; /* Espaço entre os itens (opcional) */
 }
 
 footer .social img {
@@ -458,4 +466,153 @@ footer p {
     object-fit:contain; /* Garante que a imagem preencha o espaço sem distorcer */
     border-radius: 8px; /* Opcional: Adiciona bordas arredondadas */
     margin: 10px; /* Espaçamento entre as imagens */
+    }
+
+.alto-contraste, .alto-contraste * {
+    background-color: #000 !important;
+    color: #FFD700 !important;
+    border-color: #FFD700 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    outline: none !important;
+}
+
+.alto-contraste a,
+.alto-contraste a:visited,
+.alto-contraste a:active {
+    color: #FFD700 !important;
+    background-color: #000 !important;
+    text-decoration: underline !important;
+}
+
+.alto-contraste button,
+.alto-contraste input,
+.alto-contraste select,
+.alto-contraste textarea,
+.alto-contraste label {
+    color: #FFD700 !important;
+    background-color: #111 !important;
+    border: 2px solid #FFD700 !important;
+}
+
+.alto-contraste .overlay,
+.alto-contraste nav,
+.alto-contraste header,
+.alto-contraste footer {
+    background-color: #000 !important;
+    color: #FFD700 !important;
+    border-color: #FFD700 !important;
+}
+
+.alto-contraste img {
+    filter: grayscale(100%) contrast(200%);
+    /* Opcional: deixa as imagens mais visíveis para daltônicos */
+}
+
+.alto-contraste ::placeholder {
+    color: #FFD700 !important;
+    opacity: 1 !important;
+}
+
+.alto-contraste table,
+.alto-contraste th,
+.alto-contraste td {
+    background-color: #000 !important;
+    color: #FFD700 !important;
+    border: 1px solid #FFD700 !important;
+}
+/* Navbar de acessibilidade */
+.navbar-acessibilidade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    gap: 10px;
+    background: #222;
+    color: #FFD700;
+    padding: 8px 16px;
+    align-items: center;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+.navbar-acessibilidade button,
+.navbar-acessibilidade a {
+    background: #000;
+    color: #FFD700;
+    border: 2px solid #FFD700;
+    border-radius: 4px;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+}
+.navbar-acessibilidade button:focus,
+.navbar-acessibilidade a:focus {
+    outline: 2px solid #FFD700;
+    outline-offset: 2px;
+}
+
+/* Filtros para simulação de daltonismo */
+.protanopia a,
+.protanopia button,
+.protanopia input,
+.protanopia select,
+.protanopia textarea,
+.protanopia label,
+.protanopia nav,
+.protanopia header,
+.protanopia footer,
+.protanopia .overlay,
+.protanopia img,
+.protanopia table,
+.protanopia th,
+.protanopia td {
+    filter: grayscale(0.3) contrast(1.2) sepia(0.7) hue-rotate(-30deg) !important;
+}
+
+.protanopia ::placeholder {
+    filter: grayscale(0.3) contrast(1.2) sepia(0.7) hue-rotate(-30deg) !important;
+}
+
+.deuteranopia a,
+.deuteranopia button,
+.deuteranopia input,
+.deuteranopia select,
+.deuteranopia textarea,
+.deuteranopia label,
+.deuteranopia nav,
+.deuteranopia header,
+.deuteranopia footer,
+.deuteranopia .overlay,
+.deuteranopia img,
+.deuteranopia table,
+.deuteranopia th,
+.deuteranopia td {
+    filter: grayscale(0.3) contrast(1.2) sepia(0.7) hue-rotate(30deg) !important;
+}
+
+.deuteranopia ::placeholder {
+    filter: grayscale(0.3) contrast(1.2) sepia(0.7) hue-rotate(30deg) !important;
+}
+
+.tritanopia a,
+.tritanopia button,
+.tritanopia input,
+.tritanopia select,
+.tritanopia textarea,
+.tritanopia label,
+.tritanopia nav,
+.tritanopia header,
+.tritanopia footer,
+.tritanopia .overlay,
+.tritanopia img,
+.tritanopia table,
+.tritanopia th,
+.tritanopia td {
+    filter: grayscale(0.3) contrast(1.2) sepia(0.7) hue-rotate(90deg) !important;
+}
+
+.tritanopia ::placeholder {
+    filter: grayscale(0.3) contrast(1.2) sepia(0.7) hue-rotate(90deg) !important;
 }
