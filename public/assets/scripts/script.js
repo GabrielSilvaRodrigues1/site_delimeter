@@ -185,3 +185,127 @@ function resetarAcessibilidade() {
   // Atualiza atributos ARIA
   document.getElementById('contraste-btn').setAttribute('aria-pressed', 'false');
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const containerForm = document.getElementById('container-formulario-nutricional');
+    let alertaAtivo = true; // Só mostra após recarregar
+
+    containerForm.addEventListener('mouseenter', function() {
+        if (alertaAtivo) {
+            mostrarAlertaNutricional();
+            alertaAtivo = false; // Desativa até a próxima recarga
+        }
+    });
+
+    function mostrarAlertaNutricional() {
+        Swal.fire({
+            position: "top-end",
+            html: `
+                <div style="display: flex; align-items: center; text-align: left;">
+                    <img src="assets/images/persefone-feliz.png" 
+                         style="width: 110px; height: 130px; margin-right: 20px;">
+                    <div>
+                        <h3 style="color: #2c3e50;">Assistente Virtual Perséfone</h3>
+                        <p style="color: #555; margin-top: 10px;">
+                            Preencha todos os campos para calcular suas necessidades energéticas.<br>
+                            Dica: Altura em centímetros (ex: 175) e peso em kg (ex: 68.5).
+                        </p>
+                    </div>
+                </div>
+            `,
+            showConfirmButton: true,
+            confirmButtonText: 'Entendi',
+            confirmButtonColor: '#4CAF50',
+            width: '500px',
+            backdrop: true
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Verifica se já foi mostrado (com verificação mais robusta)
+    if (sessionStorage.getItem('delimeterTourCompleted') !== 'true') {
+        const slides = [
+            {
+                title: "Bem-vindo ao Delimeter!",
+                text: "Sua plataforma completa para saúde nutricional inteligente.",
+                image: "assets/images/persefone-feliz.png"
+            },
+            {
+                title: "Soluções Integradas",
+                text: "Desde cálculo nutricional até conexão com nutricionistas - tudo em um só lugar.",
+                image: "assets/images/nutricionista.jpg"
+            },
+            {
+                title: "Parcerias de Confiança",
+                text: "Trabalhamos com SUS, CRN3 e CREMESP para oferecer o melhor serviço.",
+                image: "assets/images/sus.jpeg"
+            }
+        ];
+
+        let currentSlide = 0;
+
+        function completeTour() {
+            // Marca como completo de forma mais confiável
+            sessionStorage.setItem('delimeterTourCompleted', 'true');
+            document.removeEventListener('keydown', handleInteraction);
+            Swal.close();
+        }
+
+        function handleInteraction(e) {
+            const isRightKey = e.key === 'ArrowRight';
+            const isLeftKey = e.key === 'ArrowLeft';
+            const isClick = e.type === 'click';
+            
+            if (isRightKey || isClick) {
+                e.preventDefault();
+                if (currentSlide < slides.length - 1) {
+                    currentSlide++;
+                    showSlide();
+                } else {
+                    completeTour();
+                }
+            } else if (isLeftKey && currentSlide > 0) {
+                e.preventDefault();
+                currentSlide--;
+                showSlide();
+            }
+        }
+
+        function showSlide() {
+            Swal.fire({
+                title: slides[currentSlide].title,
+                html: `
+                    <div style="text-align: center; cursor: pointer;">
+                        <img src="${slides[currentSlide].image}" 
+                             style="max-width: 100%; max-height: 200px; object-fit: contain; border-radius: 8px; margin: 10px 0 15px;"
+                             alt="${slides[currentSlide].title}">
+                        <p style="color: #555; margin: 15px 0 20px; font-size: 1.05em;">${slides[currentSlide].text}</p>
+                        <div style="display: flex; justify-content: center; gap: 8px;">
+                            ${slides.map((_, i) => `
+                                <div style="width: 10px; height: 10px; border-radius: 50%; 
+                                    background: ${i === currentSlide ? '#4CAF50' : '#ddd'};"></div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `,
+                showConfirmButton: false,
+                showCancelButton: false,
+                allowOutsideClick: true,
+                background: '#ffffff',
+                width: 600,
+                didOpen: () => {
+                    const popup = Swal.getPopup();
+                    popup.addEventListener('click', handleInteraction);
+                    document.addEventListener('keydown', handleInteraction);
+                },
+                willClose: () => {
+                    document.removeEventListener('keydown', handleInteraction);
+                }
+            });
+        }
+
+        // Mostra após pequeno delay para melhor experiência
+        setTimeout(showSlide, 800);
+    }
+});

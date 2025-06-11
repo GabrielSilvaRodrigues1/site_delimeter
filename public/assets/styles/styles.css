@@ -589,3 +589,23 @@ footer p {
 .protanopia { --hue-rotate: -30deg; }
 .deuteranopia { --hue-rotate: 30deg; }
 .tritanopia { --hue-rotate: 90deg; }
+
+.delimeter-popup {
+    border-top: 4px solid #4CAF50;
+    border-radius: 8px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+}
+
+.delimeter-title {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.swal2-confirm {
+    font-weight: 600;
+    padding: 8px 20px;
+}
+
+.swal2-cancel {
+    padding: 8px 15px;
+}
