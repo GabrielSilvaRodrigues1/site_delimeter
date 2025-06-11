@@ -6,7 +6,7 @@
         <h1>PRIORIZAMOS A SUA ALIMENTAÇÃO</h1>
       </div>
     </section>
-    <div class="container-calc">
+    <div class="container-calc" id="container-formulario-nutricional">
       <div class="container">
         <h1>Cálculo de Gasto Energético</h1>
         <form id="formulario">
