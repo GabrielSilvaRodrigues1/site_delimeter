@@ -114,7 +114,15 @@ nav a:hover {
     background-color: #f5f5f5;
 }
 
-
+nav p {
+    display: block;
+    padding: 10px 20px;
+    margin-bottom: 0px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
 
 @media (max-width: 480px) {
     .logo img {
@@ -365,6 +373,18 @@ img {
     text-align: justify;
 }
 
+.about-paragrafo span{
+    font-weight: bold;
+    color: #26a65b;
+}
+
+.about-lista li{
+    margin-bottom: 7px;
+}
+
+.about-lista strong{
+    color: #067e38;
+}
 /* Formulário */
 .container-calc{
     display: flex;
@@ -428,6 +448,10 @@ button {
     border-radius: 4px;
     cursor: pointer;
     box-sizing: border-box; /* Garante que o padding do botão não cause overflow */
+}
+
+button:hover {
+    background-color: #26a65b;
 }
 
 /* Rodapé responsivo */
@@ -565,3 +589,23 @@ footer p {
 .protanopia { --hue-rotate: -30deg; }
 .deuteranopia { --hue-rotate: 30deg; }
 .tritanopia { --hue-rotate: 90deg; }
+
+.delimeter-popup {
+    border-top: 4px solid #4CAF50;
+    border-radius: 8px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+}
+
+.delimeter-title {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.swal2-confirm {
+    font-weight: 600;
+    padding: 8px 20px;
+}
+
+.swal2-cancel {
+    padding: 8px 15px;
+}
