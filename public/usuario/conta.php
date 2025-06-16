@@ -4,40 +4,26 @@ if (!isset($_SESSION['user_id'])) {
     header('Location: ../entrar_usuario.php');
     exit();
 }
-include __DIR__ . 'header.php'; ?>
-
-<!-- Bloco de acessibilidade -->
-<nav aria-label="Acessibilidade" class="acessibilidade">
-    <a href="#conteudo" accesskey="1">Ir para o conteúdo [1]</a>
-    <button onclick="toggleContraste()" id="contraste-btn">Alto Contraste</button>
-</nav>
-
-<main id="conteudo" tabindex="-1">
-    <h1>Minha Conta</h1>
-    <!-- Conteúdo da conta aqui -->
+include __DIR__ . '/header.php'; ?>
+<main id="conteudo" tabindex="-1" aria-labelledby="titulo-principal" class="container">
+    <div class="account-card">
+        <h1 id="titulo-principal" class="account-title">Minha Conta</h1>
+        <section class="account-section">
+            <h2 class="section-title">Informações da Conta</h2>
+            <ul class="account-info">
+                <li><strong>Nome:</strong> <?php echo htmlspecialchars($_SESSION['user_name'] ?? 'Não informado'); ?></li>
+                <li><strong>Email:</strong> <?php echo htmlspecialchars($_SESSION['user_email'] ?? 'Não informado'); ?></li>
+            </ul>
+            <div class="account-actions">
+                <a href="update.php" class="btn btn-primary">Editar Informações</a>
+                <form action="logout.php" method="post" class="inline-form">
+                    <button type="submit" class="btn btn-secondary">Sair da Conta</button>
+                </form>
+                <form action="../delete.php" method="post" class="inline-form" onsubmit="return confirm('Tem certeza que deseja excluir sua conta? Esta ação não pode ser desfeita.');">
+                    <button type="submit" class="btn btn-danger">Excluir Conta</button>
+                </form>
+            </div>
+        </section>
+    </div>
 </main>
-
-<script>
-function toggleContraste() {
-    document.body.classList.toggle('alto-contraste');
-}
-</script>
-<style>
-/* Exemplo de alto contraste */
-.alto-contraste, .alto-contraste * {
-    background-color: #000 !important;
-    color: #FFD700 !important;
-    border-color: #FFD700 !important;
-}
-.acessibilidade {
-    background: #eee;
-    padding: 8px;
-    display: flex;
-    gap: 10px;
-}
-#acessibilidade a, #contraste-btn {
-    font-size: 1em;
-}
-</style>
-
-<?php include __DIR__ . 'footer.php'; ?>
+<?php include __DIR__ . '/footer.php'; ?>

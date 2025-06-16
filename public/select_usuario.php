@@ -22,6 +22,7 @@ try {
 
     if ($usuario && password_verify($senha, $usuario['senha_usuario'])) {
         $_SESSION['user_id'] = $usuario['id_usuario'];
+        $_SESSION['user_name'] = $usuario['nome_usuario'];
         $_SESSION['user_email'] = $usuario['email_usuario'];
         header('Location: usuario/index.php');
         exit();
