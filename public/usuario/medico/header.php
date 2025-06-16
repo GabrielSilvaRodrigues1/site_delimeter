@@ -25,7 +25,7 @@
                     <ul aria-label="Acessibilidade" class="acessibilidade">
                         <li><a href="../../about.php" class="link">Sobre Nós</a></li>
                         <li><a href="../../calculo_landpage.php" class="link">Cálculo nutricional</a></li>
-                        <li><a href="conta.php" class="link">Conta</a></li>
+                        <li><a href="../conta.php" class="link">Conta</a></li>
                         <li><a href="../sair_usuario.php" class="link">Sair</a></li>
                         <li><button onclick="toggleContraste()" id="contraste-btn" aria-pressed="false" aria-label="Ativar ou desativar alto contraste">Alto Contraste</button></li>
                         <li><p>Modificar tamanho da fonte</p></li>
