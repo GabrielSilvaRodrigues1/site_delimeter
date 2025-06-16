@@ -16,7 +16,7 @@ include __DIR__ . '/header.php'; ?>
             </ul>
             <div class="account-actions">
                 <a href="update.php" class="btn btn-primary">Editar Informações</a>
-                <form action="logout.php" method="post" class="inline-form">
+                <form action="sair_usuario.php" method="post" class="inline-form">
                     <button type="submit" class="btn btn-secondary">Sair da Conta</button>
                 </form>
                 <form action="../delete.php" method="post" class="inline-form" onsubmit="return confirm('Tem certeza que deseja excluir sua conta? Esta ação não pode ser desfeita.');">
